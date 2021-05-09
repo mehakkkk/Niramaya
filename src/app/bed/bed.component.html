@@ -1,0 +1,78 @@
+
+<div class="container ">
+    <div class="sort-option row">
+      <div class="sort-box col" (click)="sort(1)" >
+        Sort by Oxygen Bed
+      </div>
+      <div class="sort-box col" (click)="sort(2)">
+        Sort by ICU Bed with ventilator
+      </div>
+      <div class="sort-box col" (click)="sort(3)">
+        Sort by without Oxygen Bed
+      </div>
+      <div class="sort-box col" (click)="sort(4)">
+        Sort by ICU Bed without ventilator
+    </div>
+</div>
+  <div class="row">
+    <div class="card-wrapper col-lg-4 col-md-6 col-xs-12 "*ngFor="let bed of Data| paginate: config " >
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img-top navbar-brand" src="../../assets/images/Niramaya Blue-green.png" alt="Card image cap">
+          <h5 class="card-title">{{bed.hospital_name}}</h5>
+          <p class="text-muted">{{bed.area}}</p><br>
+          <p class="text-muted text-verify"><b>Last verified at: {{bed.last_updated_on | date:'M/d/yy, h:mm a'}}</b></p>
+        </div>
+        <div class="table-content">
+          <table class="table ">
+            <tbody>
+              <tr>
+                <td class="border-right" >Available beds with oxygen</td>
+                <td>{{bed.available_beds_with_oxygen}}</td>
+              </tr>
+              <tr>
+                <td class="border-right">Available beds without oxygen</td>
+                <td>{{bed.available_beds_without_oxygen}}</td>
+              </tr>
+              <tr>
+                <td class="border-right">Available beds with ventilator</td>
+                <td>{{bed.available_icu_beds_with_ventilator}}</td>
+              </tr>
+              <tr>
+                <td class="border-right">Available beds without ventilator</td>
+                <td>{{bed.available_icu_beds_with_ventilator}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-body">
+          <div class="card-content">
+            
+            <p class="card-text">{{bed.hospital_address}}</p>
+            <p class="card-text">{{bed.hospital_phone}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+</div>
+
+
+
+    <!-- <div class="container table-responsive py-5"> 
+      <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" ><p> &#9661;</p></th>
+            <th scope="col" ><p> &#9661;</p></th>
+            </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor ="let state of Data" >
+            <p> &#9661;</p>
+            <p> &#9661;</p>
+          </tr>
+          
+        </tbody>
+      </table> -->

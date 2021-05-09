@@ -1,0 +1,122 @@
+.card-img-wrapper
+{
+  float: left;
+  padding-bottom: 20px;
+}
+
+.card-img-top
+{
+  height: 80px;
+  width:70px;
+  
+}
+
+.text-verify
+{
+  width: 260px;
+  
+  border-radius: 10px;
+  text-align: center;
+  background-color:rgba(13, 81, 230, 0.513);
+}
+.table{
+  margin-top: 120px;
+  border:rgb(38, 38, 121) 2px solid;
+  background-color:rgba(24, 187, 73, 0.6)
+}
+
+.table-content{
+  line-height: 9px;
+}
+
+.card-title{
+  margin-left: 80px;
+   margin-top: -70px;
+  /*float: left; */
+}
+
+.text-muted
+{
+  margin-left: 80px;
+  margin-top: -5px;
+  float: left;
+}
+.card  {
+  height: 450px;
+  margin: 20px;
+  width: 350px;
+  /* max-height: 160px; */
+  position: relative;
+  /* min-height: 550px; */
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+.card:hover {
+  box-shadow: 8px 12px 31px -10px #ab98ab;
+}
+
+
+.card-body  {
+  margin-bottom: calc(50% + 20px);
+  transition: 1.5s ease;
+}
+
+
+.sort-option
+{
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.sort-box {
+  margin: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border: #1c3664 2px solid;
+  color:#32c05d;
+  padding:10px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+.sort-box:hover { 
+	background: rgba(247, 202, 24, 0.1);
+    border:#32c05d;
+    color:#1c3664;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    transition: 0.2s;
+
+}
+.sort-box:active
+{
+  background: rgba(160, 26, 26, 0.1);
+    border:1c3664;
+    color:#1c3664;
+}
+
+
+.card-body {
+  position: absolute;
+  margin-bottom: -200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background-color: #fff;
+  transition: 1.5s ease;
+}
+.card-content {
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  transition: 1.5s ease;
+}
+.card:hover .card-body {
+  height: 80%;
+}

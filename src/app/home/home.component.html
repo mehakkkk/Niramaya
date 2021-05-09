@@ -1,0 +1,38 @@
+<div class="bg-img">
+    <img src="../../assets/images/Covid19.png" alt="Norway" style="width:100%;">
+    <div class="text-block">
+      <h4>Nature</h4>
+      <p>What a beautiful sunrise</p>
+    </div>
+  </div>
+<div class="date-container">
+  <p>{{date | date:'fullDate'}} {{date | date:'h:mm:ss a'}}</p>
+</div>
+<app-data-cards></app-data-cards>
+
+
+
+<div class="container table-responsive py-5"> 
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col" (click)="sort_by_state()"><p *ngIf="stateAsc">State &#9651;</p><p *ngIf="!stateAsc">State &#9661;</p></th>
+        <th scope="col" (click)="sort_by_active()"><p *ngIf="activeAsc">Active &#9651;</p><p *ngIf="!activeAsc">Active &#9661;</p></th>
+        <th scope="col" ><p >Confirmed </p></th>
+        <th scope="col" (click)="sort_by_recover()"><p *ngIf="recAsc">Recovered &#9651;</p><p *ngIf="!recAsc">Recovered &#9661;</p></th>
+        <th scope="col" (click)="sort_by_death()"><p *ngIf="deathAsc">Deceased &#9651;</p><p *ngIf="!deathAsc">Deceased &#9661;</p></th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor ="let state of statewiseData" >
+          <td>{{state.state}}</td>
+          <td>{{state.active}}</td>
+          <td>{{state.confirmed}}</td>
+          <td>{{state.recovered}}</td>
+          <td>{{state.deaths}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  </div>
+  
